@@ -1,6 +1,6 @@
 ---
 title: Dependent Types in C++
-tags: C++ Type-Theory
+tags: C++ Type-Theory Dependent-Functions
 season : summer
 ---
 

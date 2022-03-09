@@ -1,11 +1,11 @@
 ---
 title: Dependent Functions
-tags: Theme
+tags: Type-Theory Dependent-Functions
 season : automn
 ---
 
 A **depenedent function** is a function who's return type can depend on the inputs it recieves. For instance, in Idris, it is possible to write the following.
-```idris 
+```haskell
 dupElem : Vect n a -> Vect (2*n) a
 dupElem : [] -> []
 dupElem : (x::xs) = x :: x :: dupElem xs
