@@ -15,10 +15,7 @@ plugins:
   - jekyll-feed 
   - jekyll-sitemap
   - jekyll-toc
-  - jekyll-include-cache
-  - jekyll-gist
 
-  
 markdown: kramdown
 
 kramdown:
