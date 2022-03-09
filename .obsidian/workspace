@@ -49,8 +49,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -118,7 +117,13 @@
   "active": "1e9170fce0a10dbb",
   "lastOpenFiles": [
     "_notes/Dependent Types in C++.md",
-    "_obsidian/templates/Post Template.md",
-    "_obsidian/templates/Definition Template.md"
+    "_notes/Type Theory/Dependent Functions.md",
+    "_notes/DF.md",
+    "_obsidian/templates/Definition Template.md",
+    "_notes/Type Theory/test note.md",
+    "_notes/Dependent Functions.md",
+    "Type Theory/Dependent Functions.md",
+    "_notes/dependently typed function.md",
+    "_obsidian/templates/Post Template.md"
   ]
 }

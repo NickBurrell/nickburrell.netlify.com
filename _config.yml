@@ -32,10 +32,13 @@ sass:
 collections:
     notes:
       output: true
-      permalink: /notes/:title
+      permalink: /:title
 
 toc:
   max_level: 3
+
+include:
+  - "_notes/**/*.md"
 
 defaults:
   - scope:

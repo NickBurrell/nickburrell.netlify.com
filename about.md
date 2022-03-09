@@ -7,8 +7,8 @@ content-type: eg
 
 Welcome to [[notenote.link::https://github.com/Maxence-L/notenote.link]], a fork of [[Simply Jekyll::https://github.com/raghuveerdotnet/simply-jekyll]]!
 
-I used Obsidian for the last 6 months, to keep track of all of the things I was learning while pivoting my career from Economics to Data Science.
+Currently a university student, I've spent the last 3 years burying myself into many facets of mathematics, computer science, and logic.
 
-200 notes later, I felt that my Obsidian space was getting cramped and I began to yearn for a way to access my notes everywhere. Simply-Jekyll appeared as the most satisfactory tool on the web, as I needed wikilinks, search, LateX, and code highlighting. 
+This site is meant to be an archive of tidbits of the arcane knowledge I've learned doing coursework and research, and I hope will become a standalone archive apomb with dubiously useful, but still neat content on C++, math, PL and logic. 
 
-A little bit of dev work and polishing was need to make it compatible with my Obsidian notes. However, the template is now mature enough, so go on an [[How to setup this site\|give it a try!]]
+My current work is primarily with epistemic logic, algebra, and number theory, though currently I have a fascination with homotopy type theory. Stay tuned for future updates, including but not limited to: new posts, code snippets, and interesting additions to the site.
