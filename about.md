@@ -5,7 +5,7 @@ permalink: /about/
 content-type: eg
 ---
 
-Welcome to [[notenote.link::https://github.com/Maxence-L/notenote.link]], a fork of [[Simply Jekyll::https://github.com/raghuveerdotnet/simply-jekyll]]!
+Welcome to my technical blog! Here you'll find all manner of things tangentially related to math and computer science.
 
 Currently a university student, I've spent the last 3 years burying myself into many facets of mathematics, computer science, and logic.
 
