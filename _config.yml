@@ -1,12 +1,12 @@
-title: nickburrell.github.io
+title: Math, PL, and Logic
 name: Nick Burrell's Technical Blog
-user_description: nickburrell.github.io
-notes_url: "https://nickburrell.github.io"
+user_description: nickburrell.netlify.com
+notes_url: "https://nickburrell.netlify.com"
 profile_pic: /assets/img/profile.png
 favicon: /assets/img/favicon.png
-copyright_name: MIT
+copyright_name: MPL-2.0
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://nickburrell.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://nickburrell.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
 # Build settings
