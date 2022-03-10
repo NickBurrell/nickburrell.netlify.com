@@ -176,9 +176,11 @@
                     document.getElementById("theme-toggle").click();
                     cb_state = true;
                     makeCookie("theme", "hc", 31);
-                } else {
+                } else if (theme =="dark") {
                     cb_state = true;
                     first_run = false;
+                } else {
+                    makeCookie("theme", "dark", 31);
                 }
             }
         }
