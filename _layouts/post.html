@@ -2,7 +2,7 @@
 ---
 
 <!DOCTYPE html>
-<html lang="fr">
+<html data-theme="dark">
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="My linked notebook" property="og:site_name"/>
@@ -38,6 +38,12 @@
 </script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
+    {% for js in page.jsarr %}
+        <script type="text/javascript">
+            {% include {{ js }} %}
+        </script>
+    {% endfor %}
+
 </head>
 
 <body>
@@ -53,12 +59,14 @@
                 or page.content-type == "post" 
                 or page.content-type == "eg" -%}
             <main>
-                {%- include reading-time.html -%}
-                <h1>{{page.title}}</h1>
-                {%- include content.html -%}
-                <hr>
-                {%- include backlinks.html -%}
-                {%- include related.html -%}
+                <div class="dark-code">
+                    {%- include reading-time.html -%}
+                    <h1>{{page.title}}</h1>
+                    {%- include content.html -%}
+                    <hr>
+                    {%- include backlinks.html -%}
+                    {%- include related.html -%}
+                </div>
             </main>
             {%- endif -%}
             {%- include comments.html -%}
@@ -72,6 +80,7 @@
             window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
         });
     </script>
+    {%- include cookie-consent.html -%}
     {%- include contextmenu.html -%}
 </body>
 

@@ -2,6 +2,12 @@
 <header>
     <div class="dashboard disable-select">
         <div class="site-heading profile-board-col">
+           <h4 class="medium">
+               <label class="switch" id="theme-toggle">
+                   <input type="checkbox" onclick="themeChange()">
+                   <span class="slider round"></span>
+               </label>
+           </h4>
            <h4 class="medium"><a href="/">{{site.title}}</a></h4>
         </div>
         <div class="userboard profile-board-col">
@@ -118,5 +124,15 @@
                }
            });
 </script>
-
+<script>
+    function themeChange() {
+        var cb = document.getElementById("theme-toggle");
+        if (cb.checked == true) {
+            document.documentElement.setAttribute("data-theme", "dark")
+        } else {
+            document.documentElement.setAttribute("data-theme", "high-contrast")
+        }
+        cb.checked = !cb.checked;
+    }
+</script>
 </header>
