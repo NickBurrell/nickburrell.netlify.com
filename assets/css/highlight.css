@@ -1,5 +1,7 @@
 @use "sass:meta";
 
+pre { white-sapce: pre; overflow: auto; }
+
 html[data-theme="dark"] .highlight {
 	color: #d8dee9;
 	background-color: #2e3440;
