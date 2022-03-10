@@ -1,6 +1,16 @@
 @use "sass:meta";
 
-pre { white-sapce: pre; overflow: auto; }
+.highlight pre code * {
+	white-space: nowrap;
+}
+
+.highlight pre {
+	overflow-x: auto;
+}
+
+.highlight pre code {
+	white-space: pre;
+}
 
 html[data-theme="dark"] .highlight {
 	color: #d8dee9;
