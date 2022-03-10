@@ -5,7 +5,7 @@
            <h4 class="medium">
                <label class="switch" id="theme-toggle">
                    <input type="checkbox" onclick="themeChange()">
-                   <span class="slider round"></span>
+                   <div class="slider round"></div>
                </label>
            </h4>
            <h4 class="medium"><a href="/">{{site.title}}</a></h4>
@@ -125,6 +125,48 @@
            });
 </script>
 <script>
+
+    function makeCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    $(document).ready(function() {
+        var notif = getCookie("cookie-notice-dismissed");
+        if (notif == null) {
+            return;
+        }
+        if (notif == "true") {
+            var theme = getCookie("theme");
+            if (theme == null) {
+                makeCookie("theme", "false", 31);
+            } else {
+                if(theme == "true") {
+                    document.getElementById("theme-toggle").removeAttribute("onclick");
+                    document.getElementById("theme-toggle").click();
+                    themeChange();
+                    document.getElementById("theme-toggle").setAttribute("onclick", "themeChange()");
+                    console.log("here") 
+                    document.documentElement.setAttribute("data-theme", "high-contrast")
+                }
+            }
+        }
+    })
+
     function themeChange() {
         var cb = document.getElementById("theme-toggle");
         if (cb.checked == true) {
@@ -132,6 +174,11 @@
         } else {
             document.documentElement.setAttribute("data-theme", "high-contrast")
         }
+        if(getCookie("theme") == "false") {
+            makeCookie("theme", "true", 31)
+        } else if (getCookie("theme") == "true") {
+            makeCookie("theme", "false", 31)
+        } 
         cb.checked = !cb.checked;
     }
 </script>
