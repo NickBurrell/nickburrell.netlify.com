@@ -4,7 +4,7 @@
         <div class="site-heading profile-board-col">
            <h4 class="medium">
                <label class="switch" id="theme-toggle">
-                   <input type="checkbox" onclick="themeChange()">
+                   <input type="checkbox">
                    <div class="slider round"></div>
                </label>
            </h4>
@@ -145,23 +145,40 @@
         }
         return null;
     }
+
+    function debounce(callback, wait) {
+        let timerId;
+        return (...args) => {
+            clearTimeout(timerId);
+            timerId = setTimeout(() => {
+                callback(...args);
+            }, wait);
+        }
+    }
+
+    var first_run = true;
+    var cb_state = false;
+    
+
     $(document).ready(function() {
         var notif = getCookie("cookie-notice-dismissed");
         if (notif == null) {
             return;
         }
+        document.getElementById("theme-toggle").addEventListener("click", debounce(themeChange, 5), false)
         if (notif == "true") {
             var theme = getCookie("theme");
             if (theme == null) {
-                makeCookie("theme", "false", 31);
+                makeCookie("theme", "dark", 31);
+                first_run = false;
             } else {
-                if(theme == "true") {
-                    document.getElementById("theme-toggle").removeAttribute("onclick");
+                if(theme == "hc") {
                     document.getElementById("theme-toggle").click();
-                    themeChange();
-                    document.getElementById("theme-toggle").setAttribute("onclick", "themeChange()");
-                    console.log("here") 
-                    document.documentElement.setAttribute("data-theme", "high-contrast")
+                    cb_state = true;
+                    makeCookie("theme", "hc", 31);
+                } else {
+                    cb_state = true;
+                    first_run = false;
                 }
             }
         }
@@ -169,17 +186,20 @@
 
     function themeChange() {
         var cb = document.getElementById("theme-toggle");
-        if (cb.checked == true) {
+        if (cb_state == false) {
             document.documentElement.setAttribute("data-theme", "dark")
         } else {
             document.documentElement.setAttribute("data-theme", "high-contrast")
         }
-        if(getCookie("theme") == "false") {
-            makeCookie("theme", "true", 31)
-        } else if (getCookie("theme") == "true") {
-            makeCookie("theme", "false", 31)
-        } 
-        cb.checked = !cb.checked;
+        if(!first_run) {
+            if(getCookie("theme") == "hc") {
+                makeCookie("theme", "dark", 31)
+            } else if (getCookie("theme") == "dark") {
+                makeCookie("theme", "hc", 31)
+            } 
+        }
+        first_run = false;
+        cb_state = !cb_state;
     }
 </script>
 </header>
