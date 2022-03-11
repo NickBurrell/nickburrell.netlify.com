@@ -36,6 +36,12 @@ collections:
     general:
       output: true
       permalink: /
+    articles:
+      output: true
+      permalink: /:title
+    drafts:
+      output: true
+      permalink: /title
 
 toc:
   max_level: 3
@@ -43,6 +49,7 @@ toc:
 include:
   - "_notes/**/*.md"
   - "privacy.md"
+
 defaults:
   - scope:
       path: ""
@@ -57,3 +64,18 @@ defaults:
     values:
       layout: post
       content-type: notes
+      permalink: /notes/:title
+  - scope:
+      path: "_articles"
+      type: articles
+    values:
+      layout: post
+      permalink: /article/:title
+      content-type: article
+  - scope:
+      path: "_drafts"
+      type: drafts
+    values:
+      layout: post
+      permalink: /drafts/:title
+      content-type: article

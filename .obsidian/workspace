@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_notes/Dependent Types in C++.md",
+            "file": "_drafts/Identity Types in C++.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Dependent Types in C++.md",
+                "file": "_drafts/Identity Types in C++.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,14 +116,15 @@
   },
   "active": "1e9170fce0a10dbb",
   "lastOpenFiles": [
-    "_notes/Dependent Types in C++.md",
+    "_drafts/Identity Types in C++.md",
+    "_articles/Dependent Types in C++.md",
     "_notes/Type Theory/Dependent Functions.md",
-    "_notes/DF.md",
+    "_notes/Type Theory/Test Note 2.md",
+    "_obsidian/templates/Post Template.md",
     "_obsidian/templates/Definition Template.md",
-    "_notes/Type Theory/test note.md",
-    "_notes/Dependent Functions.md",
-    "Type Theory/Dependent Functions.md",
-    "_notes/dependently typed function.md",
-    "_obsidian/templates/Post Template.md"
+    "_notes/Type Theory/Test Note.md",
+    "_notes/Dependent Types in C++.md",
+    "_notes/DF.md",
+    "_notes/Type Theory/test note.md"
   ]
 }

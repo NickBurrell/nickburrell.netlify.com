@@ -18,10 +18,11 @@ content-type: eg
 </style>
 
 <main>
-    {% assign tags =  site.notes | map: 'tags' | join: ' '  | split: ' ' | uniq %}
+    {% assign all_pages = site.notes | concat: site.articles %}
+    {% assign tags = all_pages | map: 'tags' | join: ' '  | split: ' ' | uniq %}
     {% for tag in tags %}
         <h3 id="{{ tag }}">{{ tag | capitalize }}</h3>
-        {%- for note in site.notes -%}
+        {%- for note in all_pages -%}
             {%- if note.tags contains tag -%}
                 <li style="padding-bottom: 0.6em; list-style: none;"><a href="{{note.url}}">{{ note.title }}</a></li>
             {%- endif -%}

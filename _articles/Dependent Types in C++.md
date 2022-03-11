@@ -2,6 +2,7 @@
 title: Dependent Types in C++
 tags: C++ Type-Theory Dependent-Functions
 season : summer
+content-type: article
 ---
 
 Many people are aware of how incredible the C++ type system is. There are numerous examples of very idiomatic and clean code using templates, and in modern C++, concepts, to achieve what can only be dreamed of in other languages. Some great examples include `std::array`, `std::iterator`, and more. Few people though are aware of some newer features added in C++20. Since C++11, developers have been allowed to use *non-type* template arguments. An example of this is the definition of `std::array`, which looks similar to the definition below.
@@ -47,7 +48,7 @@ static_assert(DoThing<5>(false) == true);
 
 ```
 A very natural question to ask now would be why? Well, this is just the groundwork a wide array of possible programs that can be written in C++, with the understanding that if you saw this during a code review at your business, you would need to have a long talk with the developer.
-This is an example of a [[Dependent Functions\|dependently typed function]], which has a rich history in functional programming and theorem proving languages, though is rarely seen outside that sphere of influence. It is very interesting then that C++ would incorporate such a feature, but given C++'s history of developments with metaprogramming, it was inevitable, though I am unsure if this was their intent long term. Regardless, it is nice to have even the potential to use such a powerful tool in such a mainstream language.
+This is an example of a [[../_notes/Type Theory/Test Note 2\|dependently typed function]], which has a rich history in functional programming and theorem proving languages, though is rarely seen outside that sphere of influence. It is very interesting then that C++ would incorporate such a feature, but given C++'s history of developments with metaprogramming, it was inevitable, though I am unsure if this was their intent long term. Regardless, it is nice to have even the potential to use such a powerful tool in such a mainstream language.
 ## Limitations and Further Work
 As can be seen above, there is some unfortunate nuance to how these dependent functions can be used. Namely, all parameters used must be template parameters. For instance, there is no way to write a function like
 ```cpp

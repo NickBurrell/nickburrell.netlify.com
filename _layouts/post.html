@@ -58,7 +58,8 @@
             {%- include feed.html -%}
 
             {%- if page.content-type == "notes" 
-                or page.content-type == "post" 
+                or page.content-type == "post"
+                or page.content-type == "article" 
                 or page.content-type == "eg" -%}
             <main>
                 <div class="dark-code">

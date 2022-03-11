@@ -1,6 +1,29 @@
 
 
 {%- if page.permalink == "/" -%}
+    <h1>Articles</h1>
+    {%- for item in site.articles -%}
+        {%- if item.season == 'summer' -%}
+        <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
+            <a href="{{item.url}}" style="text-decoration: none; color: #555555;">
+            {%- if item.status == "Ongoing" or item.status == "ongoing" -%}
+            <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
+            <li style="padding: 0 5px; border-radius: 10px;" class="tag"><b>Status: </b>{{item.status | capitalize }}</li>
+            </ul>
+            <p style="margin-top: 0px;" class="feed-title">{{ item.title }}</p>
+            {%- else -%}
+                <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
+                    <li style="padding: 0 5px; border-radius: 10px;" class="tag">{{item.tags[0]}}</li>
+                </ul>
+                <p style="margin-top: 0px;" class="feed-title">{{ item.title }}</p>
+            {%- endif -%}
+            <p class="feed-excerpt">{{ item.content | strip_html | strip | escape | truncate: 100}}</p>
+            </a>
+        </div>
+        {%- endif -%}
+    {%- endfor -%}
+    <h1>Notes</h1>
+    <h2>Summer</h2>
     {%- for item in site.notes -%}
         {%- if item.season == 'summer' -%}
         <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
@@ -21,6 +44,7 @@
         </div>
         {%- endif -%}
     {%- endfor -%}
+    <h2>Spring</h2>
     {%- for item in site.notes -%}
         {%- if item.season == 'spring' -%}
         <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
@@ -41,6 +65,7 @@
         </div>
         {%- endif -%}
     {%- endfor -%}
+    <h2>Winter</h2>
     {%- for item in site.notes -%}
         {%- if item.season == 'winter' -%}
         <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
@@ -64,7 +89,8 @@
 {%- endif -%}
 
 {%- if page.permalink == "/notes" -%}
-{%- for item in site.notes -%}
+{%- assign all_pages = site.notes | concat: site.articles-%}
+{%- for item in all_pages -%}
 <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
     <a href="{{item.url}}" style="text-decoration: none; color: #333333;">
         <p class="feed-title">{{ item.title }}</p>
