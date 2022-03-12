@@ -47,18 +47,23 @@
 
     {%- if internal_link -%}
 
-    {%- assign result_notes = site.notes | where: 'title',internal_link -%}
-    {%- assign result_posts = site.posts | where: 'title',internal_link -%}
-    {%- assign result_pages = site.pages | where: 'title',internal_link -%}
+    {%- assign internal_link_file_ext = internal_link | append: ".md" -%}
+
+    {%- assign result_notes    = site.notes    | where: 'path',internal_link_file_ext -%}
+    {%- assign result_posts    = site.posts    | where: 'path',internal_link_file_ext -%}
+    {%- assign result_pages    = site.pages    | where: 'path',internal_link_file_ext -%}
+    {%- assign result_articles = site.articles | where: 'path',internal_link_file_ext -%}
+
+    {{result_articles[0].url|jsonify}}
 
     {%- assign internal_links = internal_links | append: link_joiner_delimiter | append: internal_link -%}
-    {%- assign internal_urls = internal_urls | append: link_joiner_delimiter | append: result_notes[0].url | append: result_posts[0].url | append: result_pages[0].url -%}
+    {%- assign internal_urls = internal_urls | append: link_joiner_delimiter | append: result_notes[0].url | append: result_posts[0].url | append: result_pages[0].url | append: result_articles[0].url -%}
 
     {%- endif -%}
 
     {%- if alt_link -%}
     {%- assign internal_links_alt = internal_links_alt | append: link_joiner_delimiter | append: internal_link -%}
-    {%- assign internal_urls_alt = internal_urls_alt | append: link_joiner_delimiter | append: result_notes[0].url | append: result_posts[0].url | append: result_pages[0].url -%}
+    {%- assign internal_urls_alt = internal_urls_alt | append: link_joiner_delimiter | append: result_notes[0].url | append: result_posts[0].url | append: result_pages[0].url | append: results_articles[0].url -%}
     {%- assign internal_titles_alt = internal_titles_alt | append: link_joiner_delimiter | append: alt_link -%}
 
     {%- if header_link -%}
@@ -96,18 +101,24 @@
 
     {%- for title in internal_link_array -%}
 
-    {%- assign url = internal_url_array[forloop.index0] -%}
+    {%- assign title = title | split: "/" | last -%}
 
+    {%- assign url = internal_url_array[forloop.index0] -%}
     {%- if url == nil -%}
 
     {%- assign link_text = '<a style="background-color:#ffffc4;" href="' | append: 'javascript:void(0)' | append: '">' | append: title | append: '</a>' -%}
+   
     {%- elsif url == empty -%}
+   
+    {{title | jsonify}}
 
     {%- assign link_text = '<a style="background-color:#ffffc4;" href="' | append: 'javascript:void(0)' | append: '">' | append: title | append: '</a>' -%}
 
     {%- else -%}
 
-    {%- assign post = site.notes | where: 'title',title -%}
+    {%- assign page_lists = site.notes | concat: site.articles -%}
+
+    {%- assign post = page_lists | where: 'title',title -%}
 
     {%- if post[0].title == nil -%}
 

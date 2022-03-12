@@ -2,6 +2,7 @@
 title: Dependent Functions
 tags: Type-Theory Dependent-Functions
 season : summer 
+
 ---
 
 A **depenedent function** is a function who's return type can depend on the inputs it recieves. For instance, in Idris, it is possible to write the following.

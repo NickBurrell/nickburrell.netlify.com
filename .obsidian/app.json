@@ -3,7 +3,7 @@
   "livePreview": true,
   "newFileLocation": "folder",
   "newFileFolderPath": "_notes",
-  "newLinkFormat": "relative",
+  "newLinkFormat": "absolute",
   "attachmentFolderPath": "assets/img",
   "showUnsupportedFiles": true,
   "promptDelete": false,
