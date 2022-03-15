@@ -1,0 +1,34 @@
+ - [ ] C++ Dependent Types
+	- [x] Overview
+	- [ ] Equality Types (In Progress)
+	- [ ] Simple Proofs
+	- [ ] More Complex Proofs
+	- [ ] ???
+- [ ] Algebra for CS
+	- All Relative to OOP Languages (a la C++, Kotlin, Java, etc)
+	- [ ] Monoids
+		- [ ] Basics
+		- [ ] Quotients
+		- [ ] Type Theory Aspects
+	- [ ] Groups
+		- [ ] Basics
+		- [ ] Quotient Groups
+		- [ ] Group Actions
+	- [ ] Rings
+		- [ ] Basics
+		- [ ] Subrings
+		- [ ] Ideals
+		- [ ] Quotients
+	- [ ] Applications
+		- [ ] Number Theory
+- [ ] Applied Category Theory
+	- [ ] Functors
+	- [ ] Natural Transformations
+	- [ ] Monoids
+	- [ ] F-Algebras
+	- [ ] Comonads
+	- [ ] F-Coalgebras
+- [ ] Graph Theory?
+- [ ] Logic / Applied Logic
+	- [ ] Formalizing Logic on Coq
+- [ ] Developing a logic-oriented language in Haskell (bad idea - Daniel)
