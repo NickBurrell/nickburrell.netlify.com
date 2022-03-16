@@ -85,7 +85,7 @@ template<auto X, auto Y> requires std::is_same_v<Val<X>, Val<Y>>
 ```
 
 Lets take a moment to unpack what this is really saying. We start by forward declaring a templated type, `EqT`, with no way to instantiate it. Then, we define a *specialization* of it, where the specialization is only valid if, given the two input parameters, `X` and `Y`, the types `Val<X>` and `Val<Y>` are the same. That sentence was a touch long, so perhaps it's time for an example.
-```
+```cpp
 EqT<3, 4> eq_prf_1;
 EqT<1, 2-1> eq_prf_2;
 ```
