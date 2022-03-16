@@ -1,0 +1,28 @@
+{
+  "settings": {
+    "token": "601c4408861171e608c498df2c8e7402c1213fd5c4f991bc8fa5ca6b82ab3d52",
+    "customUi": {
+      "global": {
+        "checklists": true,
+        "comments": true,
+        "description": true,
+        "labels": true,
+        "list": true,
+        "title": true
+      }
+    },
+    "selectedBoards": [],
+    "openToSide": "right",
+    "newCardPosition": "top",
+    "movedCardPosition": "top",
+    "verboseLogging": false
+  },
+  "version": "1.6.0",
+  "firstRun": false,
+  "connectedCards": {
+    "FqtjxBDFhpZXwwRly8q2K": {
+      "cardId": "623082e24327ff0cfbea2f36",
+      "boardId": "62308264081f3d842fd0d78e"
+    }
+  }
+}

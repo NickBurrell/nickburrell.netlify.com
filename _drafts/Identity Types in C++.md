@@ -1,9 +1,11 @@
-	---
+---
 title: Identity Types in C++
 tags: C++ Type-Theory
 type: article
 status: ongoing
 toc: true
+trello_board_card_id: 62308264081f3d842fd0d78e;623082e24327ff0cfbea2f36
+trello_plugin_note_id: FqtjxBDFhpZXwwRly8q2K
 ---
 # Introduction
 In type theory, and in general theorem proving, the notion of equality is a rather nuanced matter. For instance, there is at least two generally accepted forms of equality: definitional equality and value equality. Most of us are very familiar with the second, and could probably figure out what the first means. Programming languages tend to operate the same way; there is a strong notion of value equality, and almost no context for definitional equality.
