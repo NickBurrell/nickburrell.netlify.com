@@ -8,12 +8,12 @@ trello_board_card_id: 62308264081f3d842fd0d78e;623082e24327ff0cfbea2f36
 trello_plugin_note_id: FqtjxBDFhpZXwwRly8q2K
 ---
 # Introduction
-In type theory, and in general theorem proving, the notion of equality is a rather nuanced matter. For instance, there is at least two generally accepted forms of equality: definitional equality and value equality. Most of us are very familiar with the second, and could probably figure out what the first means. Programming languages tend to operate the same way; there is a strong notion of value equality, and almost no context for definitional equality.
+In type theory, and in general theorem proving, the notion of equality is a rather nuanced matter. For instance, there are at least two generally accepted forms of equality: definitional equality and value equality. Most of us are very familiar with the second, and the first means two objects are *defined* to be the same. Programming languages tend to operate the same way; there is a strong notion of value equality, and almost no context for definitional equality.
 
 # Type-Level and Value-Level Functions
 Before we can really begin any development of equality and equality types, we need to expand on a notion we began with in the [[_articles/Dependent Types in C++\|previous article]]. Its also important to consider that we are in this case only talking about C++, as these concepts don't quite transfer over one-to-one into real dependently typed languages like Idris. 
 ## Value-Level Functions
-To make things simple, we start with *value-level* functions. These are your every day, run-of-the-mill functions, like `x+2`, or `Console.WriteLine(...)`. They are functions that take in values, and return values, with types that are defined *long* before evaluation. As a concrete example, consider the following.
+To make things simple, we start with *value-level* functions. These are your every day, run-of-the-mill functions, like `x+2`, or `printf`. They are functions that take in values, and return values, with types that are defined *long* before evaluation. As a concrete example, consider the following.
 ```cpp
 	int square(int p) {
 		return p*p;
@@ -22,7 +22,7 @@ To make things simple, we start with *value-level* functions. These are your eve
 This isn't a particularly flashy function, nor does it need to be to illustrate the point: value-level functions are very simple objects conceptually.
 
 ## Type-Level Functions
-This is where things get slightly more complicated, and if you aren't comfortable with modern C++ metaprogramming concepts like templates, it would be best to brush up on those and come back later. 
+This is where things get slightly more complicated, and if you aren't comfortable with C++ metaprogramming concepts like templates and concepts, it would be best to brush up on those and come back later. 
 
 We begin by defining a *type-level* function. Put simply, a type-level function is a *type* that takes in both types and values, and produces either a type or a value. To those with a background in type theory, or who are familiar with Idris, Agda, or Coq, you may think that this sounds a lot like the definition of a [[_notes/Type Theory/Dependent Functions\|dependent function]], and you'd be right! Unfortunately, due to limitations in C++ noted in the last article, we have to make a deliniation between dependent functions and regular functions.
 
