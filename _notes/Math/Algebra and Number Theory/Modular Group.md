@@ -16,9 +16,9 @@ where $R$ is a commutative ring with identity. We will mostly be dealing with th
 We now wish to explore two different ways to generate the modular group. There are two common ones that we use, both based on the same set of matrices, namely $T$ and $S$, defined below.
 ### First Generating Set
 There are two sets of generators for $\SL_2(\Z)$ that we focus on. To begin, we define two matrices, $S$ and $T$, given as 
-$$ S := \begin{bmatrix}0&-1\\1&0\end{bmatrix}, \qquad T := \begin{bmatrix}1&1\\0&1\end{bmatrix}$$ Note that $S^2 = -I$, thus $|S|=4$. Additionally, observe that $T^n = \begin{bmatrix}1&n\\0&1\end{bmatrix}$. It is immediate that $T$ does not have finite order. 
+$$ S := \begin{bmatrix}0&-1\\1&0\end{bmatrix}, \qquad T := \begin{bmatrix}1&1\\0&1\end{bmatrix}$$ Note that $S^2 = -I$, thus $|S|=4$. Additionally, observe that $T^n = \begin{bmatrix}1&n\\ 0&1\end{bmatrix}$. It is immediate that $T$ does not have finite order. 
 
-To see that these two matrices generate $\SL_2(\Z)$, begin by fixing some matrix $A = \begin{bmatrix}a&b\\c&d\end{bmatrix}$, and consider two cases; $c\neq 0,$ and $c=0$.
+To see that these two matrices generate $\SL_2(\Z)$, begin by fixing some matrix $A = \begin{bmatrix}a&b\\ c&d\end{bmatrix}$, and consider two cases; $c\neq 0,$ and $c=0$.
 #### Case I: $c=0$
 Suppose $c=0$. Since $\det A = ad-bc$,  and $c=0$, we have that either $a=d=1$, or $a=d=-1$. In either case, we can rewrite $A$ as
 $$ A = S^{2n}\begin{bmatrix}1&b'\\0&1\end{bmatrix},$$
