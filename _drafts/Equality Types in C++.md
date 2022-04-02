@@ -8,12 +8,12 @@ trello_board_card_id: 62308264081f3d842fd0d78e;623082e24327ff0cfbea2f36
 trello_plugin_note_id: FqtjxBDFhpZXwwRly8q2K
 ---
 # Introduction
-In type theory, and in general theorem proving, the notion of equality is a rather nuanced matter. For instance, there are at least two generally accepted forms of equality: definitional equality and value equality. Most of us are very familiar with the second, and the first means two objects are *defined* to be the same. Programming languages tend to operate the same way; there is a strong notion of value equality, and almost no context for definitional equality.
+In type theory, and in general theorem proving, the notion of equality is a rather nuanced matter. For instance, there is at least two generally accepted forms of equality: definitional equality and value equality. Most of us are very familiar with the second, and the first means two objects are *defined* to be the same. Programming languages tend to operate the same way; there is a strong notion of value equality, and almost no context for definitional equality.
 
 # Type-Level and Value-Level Functions
 Before we can really begin any development of equality and equality types, we need to expand on a notion we began with in the [[_articles/Dependent Types in C++\|previous article]]. Its also important to consider that we are in this case only talking about C++, as these concepts don't quite transfer over one-to-one into real dependently typed languages like Idris. 
 ## Value-Level Functions
-To make things simple, we start with *value-level* functions. These are your every day, run-of-the-mill functions, like `x+2`, or `printf`. They are functions that take in values, and return values, with types that are defined *long* before evaluation. As a concrete example, consider the following.
+To make things simple, we start with *value-level* functions. These are your every day, run-of-the-mill functions, like `x+2`, or `printf`. They are functions that take in values, and return values, with types that are defined long before evaluation, at least in the case of statically typed languages. As a concrete example, consider the following.
 ```cpp
 	int square(int p) {
 		return p*p;
@@ -79,17 +79,12 @@ While this sounds great, I must admit my testing of this is not as thorough as I
 ## Equality Types
 Now for the final act: equality. There is a reason we took so long building up to this, as we will see, but lets just dive into the definition.
 ```cpp
-template<typename, typename> struct EqT;
+template<typename L, typename R> requires std::is_same_v<L, R> struct EqT { };
 template<auto X, auto Y> requires std::is_same_v<Val<X>, Val<Y>> 
 	struct EqT<Val<X>, Val<Y>> { };
 ```
 
-Lets take a moment to unpack what this is really saying. We start by forward declaring a templated type, `EqT`, with no way to instantiate it. Then, we define a *specialization* of it, where the specialization is only valid if, given the two input parameters, `X` and `Y`, the types `Val<X>` and `Val<Y>` are the same. That sentence was a touch long, so perhaps it's time for an example.
-```cpp
-EqT<3, 4> eq_prf_1;
-EqT<1, 2-1> eq_prf_2;
-```
-The above code won't compile, and by this point, it should be pretty clear why: $3$ and $4$ are not equal, while $1$ and $2-1$ are equal. As with the previous section, it may be difficult to see why this is useful. For most traditional software development, none of what has been discussed here is very applicable; this is not a design pattern, or an idiom that you should follow, merely a very interesting curiousity. However, to someone interested in type theory, this is fascinating, which we will cover at a later date.
+Lets take a moment to unpack what this is really saying. We start by forward declaring a templated type, `EqT`, which is only instantiable if the types `L` and `R` are the same. Further, we define a specialization of `EqT`, taking in two `auto` variables, or two instances of any literal type, which we name `X` and `Y`. In this case, `EqT` is only instantiable if `Val<X>` and `Val<Y>` are the same type.
 
 # Conclusion
 While a very interesting curiousity to explore, equality types in C++ will likely never catch on in mainstream use. They offer very little utility to people beyond those bold enough to explore theorem proving in the C++ type system. With that in mind, I still want to investigate this further. Though my research on this, I've written several basic proofs akin to those in introductory texts on languages like Idris and Coq. With that in mind, I leave off with another teaser of whats to come...
