@@ -26,6 +26,7 @@ $$ S := \begin{bmatrix}0&-1\\1&0\end{bmatrix}, \qquad T := \begin{bmatrix}1&1\\0
 Note that $S^2 = -I$, thus $|S|=4$. Additionally, observe that 
 
 $$T^n = \begin{bmatrix}1&n\\ 0 & 1\end{bmatrix}.$$
+
 It is immediate that $T$ does not have finite order. 
 
 To see that these two matrices generate $\SL_2(\Z)$, begin by fixing some matrix $A = \begin{bmatrix}a&b\\ c&d\end{bmatrix}$, and consider two cases; $c\neq 0,$ and $c=0$.
