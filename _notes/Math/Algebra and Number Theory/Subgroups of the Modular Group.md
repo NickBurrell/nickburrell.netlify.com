@@ -41,12 +41,17 @@ Thus, to find the order of $\SL_2(\Z/n\Z)$, we must find the order of $\SL_2(\Z/
 
 ### Step Two
 
-We wish to find $|\SL_2(\Z/p\Z)|$ for $p$ prime. We begin by finding $\GL_2(\Z/p\Z)$. Recall that any element in $\GL_2(\Z/p\Z)$ is a matrix $\begin{pmatrix}a&b \\ c &d\end{pmatrix}$ such that $ad-bc \neq 0$. To have this, we must have that the column vectors $\begin{pmatrix}a \\ c\end{pmatrix}$ and $\begin{pmatrix}b \\ d\end{pmatrix}$ are linearly independent, and neither is the zero vector. We know there is $p^2-1$ options for $\begin{pmatrix}a \\ c\end{pmatrix}$, as there are $p$ elements in $\Z/p\Z$, and we must exclude the zero vector. Now, to be linearly independent, $\begin{pmatrix}b \\ d\end{pmatrix}$ cannot be a scalar multiple of $\begin{pmatrix} b \\ d\end{pmatrix}$, which eliminates $p$ possibilities. Thus, there is $p^2-p$ possible linearly independent vectors for $\begin{pmatrix}b \\ d\end{pmatrix}$. Thus, $|\GL_2(\Z/p\Z)|=p^2(p^2-p)$.
+We wish to find $|\SL_2(\Z/p\Z)|$ for $p$ prime. We begin by finding $\GL_2(\Z/p\Z)$. Recall that any element in $\GL_2(\Z/p\Z)$ is a matrix with non-zero determinant. To have this, we must have that the column vectors 
+
+$$u := \begin{pmatrix}a \\ c\end{pmatrix} \text{, and }v :=\begin{pmatrix}b \\ d\end{pmatrix}$$
+
+
+are linearly independent, and neither is the zero vector. We know there is $p^2-1$ options for $u$, as there are $p$ elements in $\Z/p\Z$, and we must exclude the zero vector. Now, to be linearly independent, $v$ cannot be a scalar multiple of $v$, which eliminates $p$ possibilities. Thus, there is $p^2-p$ possible linearly independent vectors for $v$. Thus, $|\GL_2(\Z/p\Z)|=p^2(p^2-p)$.
 
 Now, to find the order of $|\SL_2(\Z/p\Z)|$, consider the determinant map $\det : \GL_2(\Z/p\Z) \to (\Z/p\Z)^{*}$. The group $(\Z/p\Z)^{*}$ has order $p-1$, and by the first isomorphism theorem, we know that $|\GL_2(\Z/p\Z)|=|\SL_2(\Z/p\Z)||(\Z/p\Z)^{*}|$, thus $|\SL_2(\Z/p\Z)|=p(p^2-1)$. 
 
 ### Step Three
-We now proceed by induction. Suppose $|\SL_2(\Z/p^n)| = p^{3n-2}(p^2-1)$. We now aim to show that $|\SL_2(\Z/p^{n+1}\Z)| = p^{3n+1}(p^2-1)$. Consider the map $\pi : \SL_2(\Z/p^{n+1}\Z) \to \SL_2(\Z/p^n)$, given by simply taking a matrix modulo $p^n$. We aim to show that the kernel has cardinality $p^3$. Consider that the kernel is the set of matrices $\begin{pmatrix}a & b \\ c & d\end{pmatrix}$ where $a\equiv d \equiv 1 \bmod p^n$, and $c\equiv d \equiv 0 \bmod p^n$. 
+We now proceed by induction. Suppose $|\SL_2(\Z/p^n)| = p^{3n-2}(p^2-1)$. We now aim to show that $|\SL_2(\Z/p^{n+1}\Z)| = p^{3n+1}(p^2-1)$. Consider the map $\pi : \SL_2(\Z/p^{n+1}\Z) \to \SL_2(\Z/p^n)$, given by simply taking a matrix modulo $p^n$. We aim to show that the kernel has cardinality $p^3$. Consider that the kernel is the set of matrices with entries $a,b,c,d\in\Z$, where $a\equiv d \equiv 1 \bmod p^n$, and $c\equiv d \equiv 0 \bmod p^n$. 
 Thus, we can rewrite $a = 1+t_1p^n, d=1+t_4p^n, b= t_2p^n, d=t_3p^n$. We can look at the determinant of any of these matrices, and we find that we have a system that must satisfy 
 $(1+t_1)(1+t_4)+t_2t_3 \equiv 1 \bmod p^n$. If we expand this, we have $1+t_1+t_4+t_1t_4+t_2t_3\equiv 1\bmod p^n$, which implies that $t_1 \equiv -t_4\bmod p^n$. 
 This is particularly important, as before, we have $p^4$ possible matrices to consider, as we had tour free terms, but now, since $a \equiv -d$, we only have three free terms, meaning that the kernel must have order $p^3$. 
