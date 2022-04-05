@@ -66,7 +66,7 @@ To find the index of the Hecke subgroup of level $n$, we recall that for $H_1 \s
 $$ [G : H_1] = [G : H_2][H_2 : H_1].$$
 Applying this to $\Gamma(n), \Gamma_1(n),$ and $\SL_2(\Z)$, we have that
 $$ [\SL_2(\Z) : \Gamma(n)] = [\SL_2(\Z) : \Gamma_1(n)][\Gamma_1(n) : \Gamma(n)]$$
-Now, consider the homomorpism $\varphi : \Gamma_1(n) \to \Z/n\Z$, given by taking the $b$ entry of this matrix modulo $n$. Observe that the kernel of this map is $\Gamma(n)$, thus, by the First Isomorphism Theorem, we have that $[\Gamma_1(n) : \Gamma(n)] = |\Z/n\Z|$, where $|\Z/n\Z$ has $n$ elements. Thus, returning to our chain above, we can substitute the known orders, yielding
+Now, consider the homomorpism $\varphi : \Gamma_1(n) \to \Z/n\Z$, given by taking the $b$ entry of this matrix modulo $n$. Observe that the kernel of this map is $\Gamma(n)$, thus, by the First Isomorphism Theorem, we have that $[\Gamma_1(n) : \Gamma(n)] = |\Z/n\Z|$, where $\Z/n\Z$ has $n$ elements. Thus, returning to our chain above, we can substitute the known orders, yielding
 
 $$ n^3\prod_{p|n}\left(1-\frac{1}{p^2}\right) = Kn$$
 
