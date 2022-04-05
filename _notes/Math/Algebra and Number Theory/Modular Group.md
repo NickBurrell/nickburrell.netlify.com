@@ -3,6 +3,7 @@ title: Modular Group
 tags: Modular-Forms Number-Theory Algebra
 season : spring 
 ---
+
 $\newcommand{\Z}{\mathbb{Z}}\newcommand{\GL}{\text{GL}}\newcommand{\SL}{\text{SL}}\newcommand{\PSL}{\text{PSL}}$
 
 The **modular group** $\SL_2(\Z)$, sometimes called the **full** modular group, is the group of $2\times 2$ matrices with integer entries, and determinant 1. An example of such a matrix is 

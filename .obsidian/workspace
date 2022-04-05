@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
+            "file": "_notes/Math/Algebra and Number Theory/Modular Group.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
+                "file": "_notes/Math/Algebra and Number Theory/Modular Group.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,8 +116,8 @@
   },
   "active": "a4d1eb8dd760d2c2",
   "lastOpenFiles": [
-    "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
     "_notes/Math/Algebra and Number Theory/Modular Group.md",
+    "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
     "_obsidian/templates/Post Template.md",
     "_notes/Type Theory/Dependent Functions.md"
   ]

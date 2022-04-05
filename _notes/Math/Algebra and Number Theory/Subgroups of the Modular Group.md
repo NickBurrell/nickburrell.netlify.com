@@ -3,8 +3,9 @@ title: Subgroups of the Modular Group
 tags: Modular-Forms Algebra Number-Theory
 season : spring
 ---
-$\newcommand{\Z}{\mathbb{Z}}\newcommand{\GL}{\text{GL}}\newcommand{\SL}{\text{SL}}\newcommand{\PSL}{\text{PSL}}$
 
+
+$\newcommand{\Z}{\mathbb{Z}}\newcommand{\GL}{\text{GL}}\newcommand{\SL}{\text{SL}}\newcommand{\PSL}{\text{PSL}}$
 In the [[_notes/Math/Algebra and Number Theory/Modular Group\|previous note]], we defined the (full) modular group. We now wish to investigate several kinds of key subgroups of $\SL_2(\Z)$. 
 
 # Congruence Subgroups
