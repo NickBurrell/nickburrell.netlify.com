@@ -4,5 +4,6 @@
 
 layout: post
 permalink: /
+preamble: $\newcommand{\Z}{\mathbb{Z}}\newcommand{\GL}{\text{GL}}\newcommand{\SL}{\text{SL}}\newcommand{\PSL}{\text{PSL}}$
 ---
 

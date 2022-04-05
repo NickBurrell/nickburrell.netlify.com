@@ -2,9 +2,8 @@
 title: Modular Group
 tags: Modular-Forms Number-Theory Algebra
 season : spring 
+preamble : $\newcommand{\Z}{\mathbb{Z}}\newcommand{\GL}{\text{GL}}\newcommand{\SL}{\text{SL}}\newcommand{\PSL}{\text{PSL}}$
 ---
-
-$\newcommand{\Z}{\mathbb{Z}}\newcommand{\GL}{\text{GL}}\newcommand{\SL}{\text{SL}}\newcommand{\PSL}{\text{PSL}}$
 
 The **modular group** $\SL_2(\Z)$, sometimes called the **full** modular group, is the group of $2\times 2$ matrices with integer entries, and determinant 1. An example of such a matrix is 
 
@@ -12,7 +11,7 @@ $$ G= \begin{bmatrix}1&1\\0&1\end{bmatrix}$$
 
 Another commonly accepted definition of the modular group is the projective special linear group $\PSL_2({\Z})$, which is defined as
 
-$$ \PSL_2(R) \cong\SL_2(R)/\{\pm I\},$$
+$$ \PSL_2(\Z) \cong\SL_2(\Z)/\{\pm I\},$$
 
 where $R$ is a commutative ring with identity. We will mostly be dealing with the first definition.
 
