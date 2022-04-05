@@ -85,6 +85,7 @@ $$ n^2\prod_{p\mid n}\left(1-\frac{1}{p^2}\right)=K\left(n\prod_{p\mid n}\left(1
 Thus,  we divide the lefthand side by the righthand side to find the order. Clearly, the leading coefficient must be $n$, but we need to be careful with our product. To be specific, we have that the product is over
 
 $$ \frac{1-\frac{1}{p^2}}{1-\frac{1}{p}} = \frac{p^2-1}{p-1}=\frac{(p+1)(p-1)}{p-1}=p+1.$$
+
 Thus, our final computation is 
 
 $$ [\SL_2(\Z) : \Gamma_0(n)] = n\prod_{p\mid n}\left(1+\frac{1}{p}\right).$$
