@@ -19,85 +19,106 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4ed67a6b7864cf8d",
-    "type": "mobile-drawer",
+    "id": "6717e598dd96b41a",
+    "type": "split",
     "children": [
       {
-        "id": "b95c50c934321f33",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "4db64cf8b0d15502",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "68aa4c7a8cad786d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9dbc9ca8a9b4d97e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "65064e787a43cd5c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "e49717acc73b602c",
-        "type": "leaf",
-        "state": {
-          "type": "tag",
-          "state": {
-            "sortOrder": "frequency",
-            "useHierarchy": true
-          }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300
   },
   "right": {
-    "id": "1a169cede740bdc1",
-    "type": "mobile-drawer",
+    "id": "0370e9f6b3246288",
+    "type": "split",
     "children": [
       {
-        "id": "f6bea04f9ef98097",
-        "type": "leaf",
-        "state": {
-          "type": "calendar",
-          "state": {}
-        }
-      },
-      {
-        "id": "dd469ec96a99f1f8",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "a5d7d5fd795f2718",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1898984f80faf121",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "9e0b27c007614efa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4dcad7fdcdc7f013",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7feb146e1c8ccf22",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
   },
   "active": "a4d1eb8dd760d2c2",
   "lastOpenFiles": [
     "_notes/Math/Algebra and Number Theory/Subgroups of the Modular Group.md",
     "_notes/Math/Algebra and Number Theory/Modular Group.md",
-    "_obsidian/templates/Math Template.md",
     "_obsidian/templates/Post Template.md",
-    "_notes/Math/Topology/Covering Spaces.md",
     "_notes/Type Theory/Dependent Functions.md"
   ]
 }
