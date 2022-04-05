@@ -74,4 +74,17 @@ $$ n^3\prod_{p|n}\left(1-\frac{1}{p^2}\right) = Kn$$
 Thus, $K = n^2\prod_{p\mid n}\left(1-\frac{1}{p^2}\right)$, finally giving that $[\SL_2(\Z):\Gamma_1(n)] = n^2\prod_{p\mid n}\left(1-\frac{1}{p^2}\right)$.
 
 ## Index of $\Gamma_0$ 
-TODO
+To find the index of $\Gamma_0(n)$ in $\SL_2(\Z)$, we begin by considering the map $\phi : \Gamma_0(n) \ to (\Z/n\Z)^{\*}$, defined by taking the $d$ entry modulo $n$. Observe that the kernel of this map is $\Gamma_1(n)$. Now, recall that $|(\Z/n\Z)^{\*}| = \varphi(n)$, where $\varphi(n)$ is Euler's totient function. Recall the formula for $\varphi(n)$ is given by
+
+$$\varphi(n) = n\prod_{p\mid n}\left(1-\frac{1}{p}\right). $$
+
+Since $[\SL_2(\Z) : \Gamma_1(n)] = [\SL_2(\Z) : \Gamma_0(n)][\Gamma_0(n) : \Gamma_1(n)]$, and $[\Gamma_0(n):\Gamma_1(n)] = \varphi(n)$ by the First Isomorphism Theorem, it follows that
+
+$$ n^2\prod_{p\mid n}\left(1-\frac{1}{p^2}\right)=K\left(n\prod_{p\mid n}\left(1-\frac{1}{p}\right)\right).$$
+
+Thus,  we divide the lefthand side by the righthand side to find the order. Clearly, the leading coefficient must be $n$, but we need to be careful with our product. To be specific, we have that the product is over
+
+$$ \frac{1-\frac{1}{p^2}}{1-\frac{1}{p}} = \frac{p^2-1}{p-1}=\frac{(p+1)(p-1)}{p-1}=p+1.$$
+Thus, our final computation is 
+
+$$ [\SL_2(\Z) : \Gamma_0(n)] = n\prod_{p\mid n}\left(1+\frac{1}{p}\right).$$
